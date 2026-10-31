@@ -1,0 +1,514 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Houssayen Habib Smondel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap">
+<style>
+/* Concept : un mur de béton banché (panneaux de coffrage, trous de tirants),
+   une chambre sombre traversée par une lame de lumière qui suit l'heure du jour,
+   puis les planches du portfolio posées sur du béton clair. */
+:root{
+  /* Couleurs */
+  --bg:#CDCBC6;
+  --sheet:#DAD8D3;
+  --ink:#1A1A18;
+  --muted:#4D4C48;
+  --line:rgba(26,26,24,.26);
+  --tint:rgba(26,26,24,.09);
+  --accent:#8A5A12;
+  --grain-filter:none;
+  --room:#1B1B19;
+  --room-ink:#ECE8DF;
+  --room-muted:#ABA89F;
+  --room-line:rgba(236,232,223,.22);
+  --beam:#F6E7BC;
+  --beam-rgb:255,236,190;
+  /* Typographie */
+  --display:'Shippori Mincho','Hiragino Mincho ProN','Yu Mincho',Georgia,'Times New Roman',serif;
+  --body:'Zen Kaku Gothic New','Hiragino Sans','Helvetica Neue',Arial,sans-serif;
+  --mono:'DM Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --gutter:clamp(16px,4vw,56px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#161615;--sheet:#1F1F1D;--ink:#E8E5DD;--muted:#A3A19A;
+    --line:rgba(232,229,221,.22);--tint:rgba(232,229,221,.08);
+    --accent:#EBCB7E;--grain-filter:invert(1);--room:#0E0E0D;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#161615;--sheet:#1F1F1D;--ink:#E8E5DD;--muted:#A3A19A;
+  --line:rgba(232,229,221,.22);--tint:rgba(232,229,221,.08);
+  --accent:#EBCB7E;--grain-filter:invert(1);--room:#0E0E0D;
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:72px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+body::after{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.07;filter:var(--grain-filter);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.room :focus-visible,.lb :focus-visible{outline-color:var(--beam)}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+p{margin:0}
+img{display:block}
+
+.wrap{width:100%;max-width:1320px;margin-inline:auto;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.section{padding-block:clamp(72px,10vw,140px)}
+.mono{font:500 12px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.room .mono{color:var(--room-muted)}
+.eyebrow{display:block;margin-bottom:18px}
+h2.t2{font:400 clamp(2rem,4.6vw,3.5rem)/1.1 var(--display);letter-spacing:-.005em}
+.sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* En-tête */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 28px;padding-block:10px}
+.brand{font:500 1.15rem/1.2 var(--display);letter-spacing:.04em;text-decoration:none}
+.nav{display:flex;flex-wrap:wrap;gap:0 24px}
+.nav a{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:12px 0 10px;border-bottom:1px solid transparent}
+.nav a:hover{border-bottom-color:var(--accent)}
+
+/* Chambre sombre : mur banché + lame de lumière */
+.room{background:var(--room);color:var(--room-ink)}
+.wall{--m:clamp(56px,8vw,104px);position:absolute;inset:0;z-index:-3;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(0,0,0,.75) 0 3px,rgba(255,255,255,.11) 3px 4.5px,transparent 5.2px) 0 0/var(--m) var(--m),
+    linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px) 0 0/calc(var(--m)*2) 100%,
+    linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px) 0 0/100% calc(var(--m)*4),
+    var(--room)}
+.wall::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 90% 80% at 60% 20%,transparent 25%,rgba(0,0,0,.6) 100%)}
+.hero{--sx:70%;--ang:13.8deg;--k:.65;position:relative;overflow:hidden;isolation:isolate;border-bottom:1px solid var(--line)}
+.slit{position:absolute;z-index:-1;left:var(--sx);top:0;width:10px;height:34%;transform:translateX(-50%);
+  background:var(--beam);opacity:calc(.3 + .7*var(--k));box-shadow:0 0 30px 10px rgba(var(--beam-rgb),.45)}
+.beam{position:absolute;z-index:-2;left:var(--sx);top:34%;width:min(72vw,680px);height:130%;
+  transform:translateX(-50%) rotate(var(--ang));transform-origin:50% 0;
+  clip-path:polygon(49% 0,51% 0,100% 100%,0 100%);
+  background:linear-gradient(to bottom,rgba(var(--beam-rgb),calc(.62*var(--k))),rgba(var(--beam-rgb),calc(.05*var(--k))) 72%);
+  transition:transform .5s ease}
+@media (prefers-reduced-motion:reduce){.beam{transition:none}}
+.hero-in{display:flex;flex-direction:column;gap:clamp(24px,3vw,40px);padding-top:clamp(180px,30vw,340px);padding-bottom:clamp(28px,4vw,48px)}
+.hero h1{font:400 clamp(2.5rem,7.4vw,6.4rem)/1.04 var(--display);letter-spacing:-.01em}
+.hero h1 .lum{color:var(--beam)}
+.hero-foot{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:end}
+@media (min-width:860px){.hero-foot{grid-template-columns:minmax(0,1fr) minmax(280px,380px);gap:64px}}
+.hero-foot p.lede{max-width:46ch;color:var(--room-muted);font-size:1.02rem}
+.hero-foot p.lede strong{display:block;margin-bottom:6px;font:500 1.15rem/1.3 var(--display);color:var(--room-ink)}
+.clock{border-top:1px solid var(--room-line);padding-top:12px}
+.clock-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.clock output{font:500 1.5rem/1 var(--mono);font-variant-numeric:tabular-nums;color:var(--beam)}
+.clock input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:32px;background:transparent;margin:6px 0 0;cursor:pointer}
+.clock input[type=range]::-webkit-slider-runnable-track{height:1px;background:rgba(236,232,223,.5)}
+.clock input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:14px;height:24px;margin-top:-12px;border:0;border-radius:0;background:var(--beam)}
+.clock input[type=range]::-moz-range-track{height:1px;background:rgba(236,232,223,.5)}
+.clock input[type=range]::-moz-range-thumb{width:14px;height:24px;border:0;border-radius:0;background:var(--beam)}
+.clock .cap{margin-top:2px;font-size:.9rem;color:var(--room-muted)}
+
+/* Projets */
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:clamp(36px,5vw,64px)}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(36px,5vw,64px) clamp(16px,2.4vw,32px);align-items:start}
+.card{grid-column:1/-1;display:block;text-decoration:none;color:inherit}
+@media (min-width:820px){.c7{grid-column:span 7}.c5{grid-column:span 5}}
+.plate{position:relative;background:var(--sheet);border:1px solid var(--line);aspect-ratio:var(--r,4/3);overflow:hidden;transition:border-color .2s}
+.plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card.c12 .plate{aspect-ratio:16/9}
+@media (min-width:820px){.card.c12 .plate{aspect-ratio:3/1}}
+.card:hover .plate,.card:focus-visible .plate{border-color:var(--ink)}
+.card .meta{padding-top:16px}
+.card h3{font:400 clamp(1.4rem,2.3vw,2rem)/1.2 var(--display);margin-bottom:6px}
+.card h3 span{background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 1px no-repeat;transition:background-size .35s}
+.card:hover h3 span,.card:focus-visible h3 span{background-size:100% 1px}
+@media (prefers-reduced-motion:reduce){.card h3 span{transition:none}}
+
+/* Démarche */
+.band{background:var(--sheet);border-block:1px solid var(--line)}
+.manif{display:grid;grid-template-columns:minmax(0,1fr);gap:32px}
+@media (min-width:900px){.manif{grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:48px}}
+.statement{font:400 clamp(1.55rem,3.1vw,2.5rem)/1.38 var(--display);max-width:30em;text-wrap:pretty}
+.principes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px;margin-top:clamp(40px,6vw,72px);padding-top:28px;border-top:1px solid var(--ink)}
+.principes h3{font:500 1.4rem/1.2 var(--display);margin-bottom:10px}
+.principes p{color:var(--muted);font-size:.98rem;max-width:36ch}
+
+/* Contact */
+.contact{position:relative;overflow:hidden;isolation:isolate}
+.contact .slit{left:auto;right:max(var(--gutter),8%);transform:none;height:46%;--k:.8;width:6px;box-shadow:0 0 24px 8px rgba(var(--beam-rgb),.35)}
+.contact h2{font:400 clamp(2.2rem,6vw,4.8rem)/1.06 var(--display);max-width:14em;margin-bottom:clamp(28px,4vw,48px)}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-bottom:20px}
+.mail-t{font:400 clamp(1.05rem,3.2vw,2rem)/1.3 var(--mono);overflow-wrap:anywhere;color:var(--beam);min-width:0}
+.btn{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:var(--room-ink);background:none;border:1px solid var(--room-ink);padding:12px 16px;cursor:pointer;display:inline-block}
+.btn:hover{background:var(--room-ink);color:var(--room)}
+.mail-b{display:flex;gap:12px}
+.contact .note{color:var(--room-muted);max-width:50ch}
+
+/* Pied de page */
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-block:20px}
+.foot a{text-decoration:none;border-bottom:1px solid var(--line)}
+.foot a:hover{border-bottom-color:var(--accent)}
+
+/* Page projet */
+.back{display:inline-block;margin-top:clamp(24px,4vw,40px);text-decoration:none;padding:6px 0;border-bottom:1px solid transparent}
+.back:hover{border-bottom-color:var(--accent);color:var(--ink)}
+.d-head{padding-block:clamp(28px,5vw,56px) clamp(28px,4vw,48px);display:grid;gap:18px}
+.d-title{font:400 clamp(2.4rem,7vw,5.6rem)/1.04 var(--display);letter-spacing:-.01em;outline:none}
+.d-lede{font:400 clamp(1.15rem,2.2vw,1.6rem)/1.45 var(--display);max-width:34ch}
+.d-intro{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:start}
+@media (min-width:900px){
+  .d-intro.std{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+  .d-intro.wide .d-info{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,64px);align-items:start}
+  .d-intro.wide .d-text{margin-top:0}
+}
+.fiche{margin:0;border-top:1px solid var(--ink)}
+.fiche div{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.fiche dt{font:500 11px/1.8 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fiche dd{margin:0;font-size:.97rem;line-height:1.5}
+@media (max-width:520px){.fiche div{grid-template-columns:minmax(0,1fr);gap:2px}}
+.d-text{margin-top:28px;max-width:58ch;display:grid;gap:1em}
+
+.shot{display:block;width:100%;margin:0;padding:0;border:0;background:none;color:inherit;text-align:left;cursor:zoom-in;font:inherit}
+.shot .im{display:block;background:var(--sheet);border:1px solid var(--line);transition:border-color .2s}
+.shot img{width:100%;height:auto}
+.shot:hover .im,.shot:focus-visible .im{border-color:var(--ink)}
+.shot .cap{display:block;margin-top:8px;font:500 11px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.d-hero{min-width:0}
+
+.gal-h{margin:clamp(48px,7vw,88px) 0 20px;padding-top:16px;border-top:1px solid var(--ink)}
+.gal-h h2{font:400 clamp(1.4rem,2.4vw,2rem)/1.2 var(--display)}
+.gal{columns:3 300px;column-gap:clamp(12px,1.6vw,20px)}
+.gal .shot{break-inside:avoid;margin-bottom:clamp(14px,1.8vw,22px)}
+
+.pn{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;border-top:1px solid var(--ink);margin-top:clamp(48px,8vw,96px);padding-top:24px}
+.pn a{display:flex;flex-direction:column;gap:6px;text-decoration:none;min-width:0}
+.pn a:hover strong{text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:5px}
+.pn strong{font:400 clamp(1.1rem,2.4vw,1.8rem)/1.2 var(--display)}
+.pn .r{text-align:right;align-items:flex-end}
+.d-end{padding-bottom:clamp(48px,8vw,96px)}
+
+/* Visionneuse */
+.lb{position:fixed;inset:0;z-index:60;background:var(--room);color:var(--room-ink);display:flex;flex-direction:column;
+  padding:env(safe-area-inset-top,0px) max(16px,env(safe-area-inset-right,0px)) env(safe-area-inset-bottom,0px) max(16px,env(safe-area-inset-left,0px))}
+.lb .mono{color:var(--room-muted)}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.lb-stage{position:relative;flex:1;min-height:0;touch-action:pan-y}
+.lb-stage img{position:absolute;inset:0;margin:auto;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;background:var(--sheet)}
+.lb-foot{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;padding-block:12px}
+.lb-foot .mono{text-align:center}
+.lb .btn{padding:10px 14px}
+
+@media (prefers-reduced-motion:reduce){.plate,.shot .im{transition:none}}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#accueil">Habib Smondel</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#projets">Projets</a>
+      <a href="#demarche">Démarche</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero room" id="accueil" aria-labelledby="titre-accueil">
+    <div class="wall" aria-hidden="true"></div>
+    <div class="beam" aria-hidden="true"></div>
+    <div class="slit" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <p class="mono">Portfolio d'architecture · 2026</p>
+      <h1 id="titre-accueil">Un geste simple.<br><span class="lum">Une lumière précise.</span></h1>
+      <div class="hero-foot">
+        <p class="lede"><strong>Houssayen Habib Smondel</strong>Je conçois des équipements culturels, des halles et des ensembles habités. Cinq projets présentés avec leurs plans, coupes, axonométries et images.</p>
+        <div class="clock">
+          <div class="clock-row">
+            <label class="mono" for="heure">Heure du jour</label>
+            <output id="heure-out" for="heure">16:00</output>
+          </div>
+          <input type="range" id="heure" min="7" max="19" step="0.25" value="16" aria-describedby="heure-cap">
+          <p class="cap" id="heure-cap">Lumière dorée de l'après-midi</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets" class="wrap section" aria-labelledby="t-projets">
+    <div class="sec-head">
+      <div>
+        <span class="mono eyebrow">Planches et images</span>
+        <h2 class="t2" id="t-projets">Projets</h2>
+      </div>
+      <p class="mono">5 projets</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="demarche" class="band" aria-labelledby="t-demarche">
+    <div class="wrap section">
+      <div class="manif">
+        <div><span class="mono">Démarche</span><h2 class="sr" id="t-demarche">Démarche</h2></div>
+        <div>
+          <p class="statement">Une architecture pensée comme une interface entre l'humain, la nature et le tissu urbain. Un bloc qu'on incise, une surface qu'on plie, des volumes qu'on disperse autour d'un cœur vert.</p>
+          <div class="principes">
+            <div><h3>Le geste</h3><p>Une masse incisée, une surface pliée, des volumes dispersés. Chaque projet se lit dès son premier diagramme.</p></div>
+            <div><h3>La lumière</h3><p>La lumière lit la géométrie. L'arête la révèle, le pli la creuse, l'atrium la répand sans percer les façades.</p></div>
+            <div><h3>Le lien</h3><p>Entre l'intérieur et l'extérieur, entre le bâtiment et la ville. Des cours, des bassins, des toitures végétalisées.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact room" aria-labelledby="t-contact">
+    <div class="wall" aria-hidden="true"></div>
+    <div class="slit" aria-hidden="true"></div>
+    <div class="wrap section">
+      <span class="mono eyebrow">Contact</span>
+      <h2 id="t-contact">Un projet à discuter&nbsp;?</h2>
+      <div class="mail">
+        <span class="mail-t" id="mail">houssayenhabibsmondel@gmail.com</span>
+        <div class="mail-b">
+          <button type="button" class="btn" id="copy">Copier</button>
+          <a class="btn" href="mailto:houssayenhabibsmondel@gmail.com">Écrire</a>
+        </div>
+      </div>
+      <p class="note">Écrivez-moi pour parler d'un projet ou d'une collaboration.</p>
+    </div>
+  </section>
+</main>
+
+<main id="detail" hidden></main>
+
+<footer class="foot">
+  <div class="wrap mono">
+    <span>© 2026 Houssayen Habib Smondel</span>
+    <a href="#accueil">Haut de page</a>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Visionneuse d'images" hidden>
+  <div class="lb-bar">
+    <span class="mono" id="lb-count"></span>
+    <button type="button" class="btn" id="lb-x">Fermer</button>
+  </div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
+  <div class="lb-foot">
+    <button type="button" class="btn" id="lb-p" aria-label="Image précédente">←</button>
+    <p class="mono" id="lb-cap"></p>
+    <button type="button" class="btn" id="lb-n" aria-label="Image suivante">→</button>
+  </div>
+</div>
+
+<script>
+/* ---------- Dimensions des images (largeur, hauteur) ---------- */
+const D={"hal-1":[748,490],"hal-2":[748,492],"hal-3":[748,488],"hal-4":[748,484],"hal-concept":[1000,577],"hal-plan":[932,644],"hal-coupes":[932,534],"hal-fac-se":[922,388],"hal-fac-so":[922,396],"bnt-facade":[1000,503],"bnt-int1":[700,498],"bnt-int2":[704,498],"bnt-int3":[700,468],"bnt-int4":[704,468],"bnt-int5":[700,512],"bnt-int6":[704,512],"bnt-masse":[1000,917],"bnt-plans":[1000,667],"bnt-axo":[562,1890],"pv-hero":[1000,205],"pv-r1":[672,240],"pv-r2":[672,280],"pv-r3":[672,292],"pv-r4":[672,314],"pv-r5":[672,398],"pv-masse":[1000,819],"pv-plans":[1000,970],"pv-concept":[860,1406],"mus-facade":[1068,317],"mus-int1":[656,540],"mus-int2":[656,602],"mus-int3":[656,430],"mus-expo1":[476,380],"mus-expo2":[476,488],"mus-expo3":[476,488],"mus-expo4":[476,386],"mus-expo5":[476,458],"mus-situation":[984,514],"mus-plan-rdc":[1000,817],"mus-plans-etages":[1000,432],"mus-coupes":[1000,485],"mus-axo":[1000,672],"mus-geste":[1000,212],"cou-render":[1000,717],"cou-plan":[840,974],"cou-int1":[612,480],"cou-int2":[612,400],"cou-schema1":[570,684],"cou-schema2":[850,740]};
+
+/* ---------- Projets ---------- */
+const P=[
+{slug:"halle-pliee",titre:"La halle pliée",meta:"Halle polyvalente · Tunis",
+ card:{img:"hal-1",r:"3/2",span:"c7",pos:"50% 50%"},
+ hero:"hal-1",heroCap:"Façade au crépuscule",
+ lede:"La structure comme geste, le pli comme intelligence.",
+ texte:[
+  "La halle est une surface en tension, pas un volume posé sur un terrain. Chaque pli rigidifie la matière et transforme la surface en système porteur.",
+  "Sous la toiture pliée s'organisent les espaces servis, les fonctions servantes et les zones techniques. Le lieu est permanent et les usages évoluent : exposition, conférence, performance."],
+ fiche:[["Programme","Halle polyvalente"],["Lieu","Tunis, près du Jardin japonais"],["Idée","De la surface à la structure, du pli à l'espace"],["Dessins","Plan du rez-de-chaussée, coupes A-A et B-B, façades sud-est et sud-ouest · 1/200"]],
+ groupes:[
+  {titre:"Images",items:[["hal-2","Vue aérienne au crépuscule"],["hal-3","Intérieur et miroir d'eau"],["hal-4","La toiture pliée vue du dessus"]]},
+  {titre:"Plans, coupes et schémas",items:[["hal-concept","Schémas de concept, du pli à la structure"],["hal-plan","Plan du rez-de-chaussée · 1/200"],["hal-coupes","Coupes A-A et B-B · 1/200"],["hal-fac-se","Façade sud-est · 1/200"],["hal-fac-so","Façade sud-ouest · 1/200"]]}]},
+
+{slug:"bibliotheque-nationale-de-tunis",titre:"Bibliothèque nationale de Tunis",meta:"Équipement culturel · Tunis",
+ card:{img:"bnt-facade",r:"4/3",span:"c5",pos:"42% 50%"},
+ hero:"bnt-facade",heroCap:"Façade principale au coucher du soleil",
+ lede:"Une bibliothèque sur sept niveaux, reliée par un grand vide central.",
+ texte:[
+  "Une façade courbe entièrement vitrée marque l'entrée et ouvre le bâtiment sur un parvis planté. Le plan masse insère l'ensemble dans un tissu dense, au bord de l'avenue.",
+  "À l'intérieur, un hall d'accueil et un atrium relient les niveaux. Les salles de lecture s'ouvrent sur le vide et reçoivent la lumière du jour par la grande façade et par les ouvertures zénithales."],
+ fiche:[["Programme","Bibliothèque nationale, auditorium, exposition du livre, salles de lecture, réserves"],["Lieu","Tunis"],["Niveaux","Rez-de-chaussée et six niveaux"],["Dessins","Plan masse, plans du rez-de-chaussée et de l'étage 1 · 1/200, axonométrie éclatée"]],
+ groupes:[
+  {titre:"Images",items:[["bnt-int1","Atrium et circulations"],["bnt-int2","Hall d'accueil"],["bnt-int3","Salle de lecture vue depuis la coursive"],["bnt-int4","Espace de lecture vitré"],["bnt-int5","Rayonnages en double hauteur"],["bnt-int6","Coursives autour du vide central"]]},
+  {titre:"Plans, coupes et schémas",items:[["bnt-masse","Plan masse · 1/200"],["bnt-plans","Plans du rez-de-chaussée et de l'étage 1 · 1/200"],["bnt-axo","Axonométrie éclatée des niveaux"]]}]},
+
+{slug:"musee-de-l-ecriture",titre:"Musée de l'écriture",meta:"Musée · La stèle sculptée",
+ card:{img:"mus-facade",span:"c12",pos:"50% 50%"},
+ hero:"mus-facade",heroCap:"Vue extérieure, façades gravées",
+ lede:"La stèle sculptée.",
+ texte:[
+  "La masse est un bloc pur et protecteur, symbole de l'ancrage et de la sauvegarde du patrimoine écrit. Une incision côté rue soustrait de la matière et crée une faille d'entrée qui aspire le visiteur.",
+  "L'évidement creuse le cœur du bâtiment, atrium et patio, et inonde l'intérieur de lumière contrôlée sans percer les façades. Le parcours d'exposition suit l'histoire de l'écriture, de l'alphabet à l'ère numérique."],
+ fiche:[["Programme","Musée"],["Idée","La masse, l'incision, l'évidement"],["Dessins","Plan de situation · 1/500, plan masse · 1/200, plans, coupes A-A et B-B, façades · 1/100, axonométrie éclatée"]],
+ groupes:[
+  {titre:"Images",items:[["mus-int1","Hall d'entrée et atrium"],["mus-int2","Atrium sous la verrière"],["mus-int3","Mezzanine sous la verrière"],["mus-expo1","Salle d'exposition"],["mus-expo2","Parcours de l'alphabet"],["mus-expo3","Vitrine sur les supports de l'écriture"],["mus-expo4","Salle des machines d'écriture"],["mus-expo5","L'ère numérique"]]},
+  {titre:"Plans, coupes et schémas",items:[["mus-geste","La masse, l'incision, l'évidement"],["mus-axo","Axonométrie éclatée"],["mus-situation","Plan de situation · 1/500"],["mus-plan-rdc","Plan du rez-de-chaussée · 1/100"],["mus-plans-etages","Plans du 1er et du 2e étage · 1/100"],["mus-coupes","Coupes A-A, B-B et façades · 1/100"]]}]},
+
+{slug:"poumon-vert-de-la-ville",titre:"Poumon vert de la ville",meta:"Ensemble bâti autour d'un cœur paysager",
+ card:{img:"pv-r5",r:"4/3",span:"c5",pos:"50% 50%"},
+ hero:"pv-hero",heroCap:"Vue du jardin au crépuscule",
+ lede:"Un cœur vert qui distribue les flux et relie les volumes.",
+ texte:[
+  "Plusieurs volumes fragmentés sont organisés de manière cohérente autour d'un noyau central, lieu de rencontre, de respiration et de vie. Le cœur du projet agit comme un organe vital.",
+  "Les toitures sont végétalisées et prolongent le sol naturel. Le végétal et le minéral entrent dans l'architecture comme éléments à part entière, et le projet respire pour la ville."],
+ fiche:[["Programme","Ensemble de volumes autour d'un cœur paysager"],["Idée","Un poumon vert pour la ville"],["Dessins","Plan masse, plans du rez-de-chaussée et de l'étage · 1/200, schémas de concept"]],
+ groupes:[
+  {titre:"Images",items:[["pv-r1","Parvis et stationnement"],["pv-r2","Jardin et pergola"],["pv-r3","Bassin et passerelle"],["pv-r4","Allée de pierre et toitures végétalisées"],["pv-r5","Escalier hélicoïdal"]]},
+  {titre:"Plans, coupes et schémas",items:[["pv-concept","Concept et organisation spatiale"],["pv-masse","Plan masse"],["pv-plans","Plans du rez-de-chaussée et de l'étage · 1/200"]]}]},
+
+{slug:"maison-de-haute-couture",titre:"Maison de haute couture",meta:"Maison de couture · Ateliers et boutique",
+ card:{img:"cou-render",r:"3/2",span:"c7",pos:"50% 50%"},
+ hero:"cou-render",heroCap:"Perspective en coupe",
+ lede:"Une enveloppe percée qui efface la limite entre l'intérieur et l'extérieur.",
+ texte:[
+  "Le volume initial se disperse en plusieurs blocs réunis par une paroi protectrice. Cette enveloppe unificatrice se dédouble pour créer un espace entre l'intérieur et l'extérieur, en référence à la House N de Sou Fujimoto.",
+  "Des ouvertures de tailles variées découpent la façade et jouent avec l'ombre et la lumière. Le plan s'organise autour d'un bassin et réunit l'accueil et la boutique, la salle de défilé, les ateliers et la buvette."],
+ fiche:[["Programme","Boutique, salle de défilé, ateliers de création, de couture et d'accessoires, buvette"],["Référence","House N, Sou Fujimoto"],["Idée","Émergence entre intérieur et extérieur"],["Dessins","Perspective en coupe, plan du rez-de-chaussée, vues intérieures, schémas"]],
+ groupes:[
+  {titre:"Images",items:[["cou-int1","Salon et portants de présentation"],["cou-int2","Circulation intérieure et ouvertures"]]},
+  {titre:"Plans, coupes et schémas",items:[["cou-plan","Plan du rez-de-chaussée"],["cou-schema1","Dispersion des volumes et paroi protectrice"],["cou-schema2","Intérieur et extérieur, enveloppe unificatrice"]]}]}
+];
+
+/* ---------- Rendu ---------- */
+const $=s=>document.querySelector(s);
+const home=$('#home'),detail=$('#detail');
+const img=(id,alt,extra)=>{const d=D[id];return `<img src="img/${id}.jpg" width="${d[0]}" height="${d[1]}" alt="${alt}" ${extra||''}>`};
+const shot=(id,cap,i)=>`<button type="button" class="shot" data-i="${i}" aria-label="Agrandir : ${cap}"><span class="im">${img(id,cap,'loading="lazy" decoding="async"')}</span><span class="cap">${cap}</span></button>`;
+
+$('#grid').innerHTML=P.map(p=>`<a class="card ${p.card.span}" href="#projet-${p.slug}">
+  <div class="plate"${p.card.r?` style="--r:${p.card.r}"`:''}>${img(p.card.img,'',`loading="lazy" decoding="async" style="object-position:${p.card.pos}"`)}</div>
+  <div class="meta"><h3><span>${p.titre}</span></h3><p class="mono">${p.meta}</p></div></a>`).join('');
+
+let cur=null;
+function showProject(p){
+  const n=P.length,i=P.indexOf(p),prev=P[(i-1+n)%n],next=P[(i+1)%n];
+  const all=[[p.hero,p.heroCap]];
+  p.groupes.forEach(g=>g.items.forEach(it=>all.push(it)));
+  p._all=all;cur=p;
+  let k=1;
+  const hd=D[p.hero],wide=hd[0]/hd[1]>2.4;
+  const gal=p.groupes.map(g=>`<div class="gal-h"><h2>${g.titre}</h2></div><div class="gal">${g.items.map(it=>shot(it[0],it[1],k++)).join('')}</div>`).join('');
+  detail.innerHTML=`<div class="wrap d-end">
+    <a class="back mono" href="#projets">← Tous les projets</a>
+    <header class="d-head">
+      <p class="mono">${p.meta}</p>
+      <h1 class="d-title" id="d-title" tabindex="-1">${p.titre}</h1>
+      <p class="d-lede">${p.lede}</p>
+    </header>
+    <div class="d-intro ${wide?'wide':'std'}">
+      <div class="d-hero"><button type="button" class="shot" data-i="0" aria-label="Agrandir : ${p.heroCap}"><span class="im">${img(p.hero,p.heroCap,'fetchpriority="high"')}</span><span class="cap">${p.heroCap}</span></button></div>
+      <div class="d-info">
+        <dl class="fiche">${p.fiche.map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join('')}</dl>
+        <div class="d-text">${p.texte.map(t=>`<p>${t}</p>`).join('')}</div>
+      </div>
+    </div>
+    ${gal}
+    <nav class="pn" aria-label="Autres projets">
+      <a href="#projet-${prev.slug}"><span class="mono">← Projet précédent</span><strong>${prev.titre}</strong></a>
+      <a class="r" href="#projet-${next.slug}"><span class="mono">Projet suivant →</span><strong>${next.titre}</strong></a>
+    </nav>
+  </div>`;
+  home.hidden=true;detail.hidden=false;
+  window.scrollTo(0,0);
+  const t=$('#d-title');if(t)t.focus({preventScroll:true});
+}
+function showHome(id){
+  const wasHidden=home.hidden;
+  detail.hidden=true;home.hidden=false;
+  requestAnimationFrame(()=>{
+    const el=id&&document.getElementById(id);
+    if(el)el.scrollIntoView();
+    else if(wasHidden)window.scrollTo(0,0);
+  });
+}
+function route(){
+  lbClose(true);
+  const h=decodeURIComponent(location.hash.slice(1));
+  if(h.indexOf('projet-')===0){
+    const p=P.find(x=>'projet-'+x.slug===h);
+    if(p){showProject(p);return}
+  }
+  showHome(h);
+}
+
+/* ---------- Visionneuse ---------- */
+const lb=$('#lb'),lbImg=$('#lb-img'),lbCap=$('#lb-cap'),lbCount=$('#lb-count'),lbStage=$('#lb-stage');
+let ci=0,opener=null;
+function lbShow(i){
+  const a=cur._all;ci=(i+a.length)%a.length;
+  const id=a[ci][0],cap=a[ci][1],d=D[id];
+  lbImg.src='img/'+id+'.jpg';lbImg.alt=cap;
+  lbImg.style.width='min(100%,'+Math.round(d[0]*1.5)+'px)';
+  lbCap.textContent=cap;lbCount.textContent=(ci+1)+' / '+a.length;
+  [1,-1].forEach(s=>{const o=a[(ci+s+a.length)%a.length][0];const im=new Image();im.src='img/'+o+'.jpg'});
+}
+function lbOpen(i,btn){
+  if(!cur)return;
+  opener=btn;lbShow(i);lb.hidden=false;
+  document.documentElement.style.overflow='hidden';
+  $('#lb-x').focus();
+}
+function lbClose(silent){
+  if(lb.hidden)return;
+  lb.hidden=true;document.documentElement.style.overflow='';
+  if(!silent&&opener&&document.contains(opener))opener.focus({preventScroll:true});
+}
+detail.addEventListener('click',e=>{
+  const b=e.target.closest('.shot');
+  if(b)lbOpen(parseInt(b.dataset.i,10)||0,b);
+});
+$('#lb-x').addEventListener('click',()=>lbClose());
+$('#lb-p').addEventListener('click',()=>lbShow(ci-1));
+$('#lb-n').addEventListener('click',()=>lbShow(ci+1));
+lbStage.addEventListener('click',e=>{if(e.target===lbStage)lbClose()});
+let tx=null;
+lbStage.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+lbStage.addEventListener('touchend',e=>{
+  if(tx===null)return;
+  const dx=e.changedTouches[0].clientX-tx;tx=null;
+  if(Math.abs(dx)>50)lbShow(ci+(dx<0?1:-1));
+});
+document.addEventListener('keydown',e=>{
+  if(lb.hidden)return;
+  if(e.key==='Escape'){lbClose();return}
+  if(e.key==='ArrowLeft'){lbShow(ci-1);return}
+  if(e.key==='ArrowRight'){lbShow(ci+1);return}
+  if(e.key==='Tab'){
+    const f=[$('#lb-x'),$('#lb-p'),$('#lb-n')],ix=f.indexOf(document.activeElement);
+    e.preventDefault();
+    f[(ix+(e.shiftKey?-1:1)+f.length)%f.length].focus();
+  }
+});
+
+window.addEventListener('hashchange',route);
+route();
+
+/* ---------- Lumière du hero ---------- */
+const hero=$('#accueil'),rng=$('#heure'),out=$('#heure-out'),cap=$('#heure-cap');
+function lumiere(){
+  const h=parseFloat(rng.value);
+  hero.style.setProperty('--ang',((h-13)*4.6).toFixed(1)+'deg');
+  hero.style.setProperty('--k',Math.max(.18,1-Math.abs(h-13)/8.5).toFixed(2));
+  const hh=Math.floor(h),mm=Math.round((h-hh)*60);
+  out.textContent=String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0');
+  cap.textContent=h<10.5?'Lumière rasante du matin':h<15.5?'Lumière haute, ombres courtes':h<17.5?'Lumière dorée de l\'après-midi':'Lumière rasante du soir';
+}
+rng.addEventListener('input',lumiere);
+lumiere();
+
+/* ---------- Contact ---------- */
+const copyBtn=$('#copy'),mail=$('#mail');
+copyBtn.addEventListener('click',async()=>{
+  const txt=mail.textContent.trim();
+  try{await navigator.clipboard.writeText(txt);copyBtn.textContent='Copié'}
+  catch(e){
+    const r=document.createRange();r.selectNodeContents(mail);
+    const s=window.getSelection();s.removeAllRanges();s.addRange(r);copyBtn.textContent='Sélectionné';
+  }
+  setTimeout(()=>{copyBtn.textContent='Copier'},1800);
+});
+</script>
+
+</body></html>
